@@ -2,6 +2,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
+        .foto {
+            display: none;
+            width: 980px;
+            height: 980px;
+        }
         .box {
             padding-left: 40px;
             padding-right: 40px;
@@ -28,20 +33,31 @@
     }
     function showDivs(n) {
         var i;
-        // var x = document.getElementsByClassName("mySlides");
+        var foto = document.getElementsByClassName("foto");
         var x = slides;
         if (n > x.length) {slideIndex = 1}
         if (n < 1) {slideIndex = x.length} ;
-        // for (i = 0; i < x.length; i++) {
-        //     x[i].style.display = "none";
-        // }
-        // x[slideIndex-1].style.display = "block";
+        for (i = 0; i < x.length; i++) {
+            foto[i].style.display = "none";
+        }
+        foto[slideIndex-1].style.display = "block";
         var box = document.getElementById('box');
         box.innerHTML = x[slideIndex-1];
     }
 </script>
 <body onload="showDivs(1)">
     <div class="w3-content w3-display-container">
+        <div style="margin: clear;">
+            <img class="foto" src="img/i1.png">
+            <img class="foto" src="img/i2.png">
+            <img class="foto" src="img/i3.png">
+            <img class="foto" src="img/i4.png">
+            <img class="foto" src="img/i5.png">
+            <img class="foto" src="img/i6.png">
+            <img class="foto" src="img/i7.png">
+            <img class="foto" src="img/i8.png">
+            <img class="foto" src="img/i9.png">
+        </div>
         <div id="box" class="box"></div>
         <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
         <button class="w3-button w3-display-right" onclick="plusDivs(+1)">&#10095;</button>
