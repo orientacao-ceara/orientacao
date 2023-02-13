@@ -16,15 +16,15 @@
     </style>
 <script>
     var slides = [
-        'A Orientação é um esporte da natureza. É uma corrida individual em terrenos diversos, como campos, bosques e áreas urbanas, onde o atleta compete com outros de mesma experiência e faixa etária.',
-        'O percurso de orientação é a sequência de pontos de controle a serem visitados. Cada ponto de controle tem um número próprio, e é marcado no terreno com um prisma branco e laranja.',
-        'A sinalética é uma tabela impressa no mapa onde aparecem a ordem, o número do ponto de controle e alguns símbolos que ajudam a localizar o prisma.',
-        'Em uma competição, há um horário definido para a partida do atleta, que só poderá ver o mapa após autorizado. O tempo de competição começa neste instante.',
-        'Na partida, o atleta é direcionado para o prisma identificado com um triângulo. A localização dele corresponde ao ponto marcado com um triângulo no mapa. É como se o mapa dissesse: você está aqui.',
-        'A partir do prisma do triângulo, o atleta tem que ler o mapa, identificar os elementos naturais e construídos, e definir a estratégia para chegar próximo ponto.',
-        'O atleta deve visitar os pontos na ordem apresentada e conferir se o número do controle junto ao prisma corresponde ao número apresentado na sinalética.',
-        'Após o último ponto numerado há o ponto da chegada. O tempo de competição finaliza aqui.',
-        'Para definir o vencedor, os tempos de competição são comparado entre os atletas de mesma categoria, que realizaram o mesmo percurso.'
+        '1/9 A Orientação é um esporte da natureza. É uma corrida individual em terrenos diversos, como campos, bosques e áreas urbanas, onde o atleta compete com outros de mesma experiência e faixa etária.',
+        '2/9 O percurso de orientação é a sequência de pontos de controle a serem visitados. Cada ponto de controle tem um número próprio, e é marcado no terreno com um prisma branco e laranja.',
+        '3/9 A sinalética é uma tabela impressa no mapa onde aparecem a ordem, o número do ponto de controle e alguns símbolos que ajudam a localizar o prisma.',
+        '4/9 Em uma competição, há um horário definido para a partida do atleta, que só poderá ver o mapa após autorizado. O tempo de competição começa neste instante.',
+        '5/9 Na partida, o atleta é direcionado para o prisma identificado com um triângulo. A localização dele corresponde ao ponto marcado com um triângulo no mapa. É como se o mapa dissesse: você está aqui.',
+        '6/9 A partir do prisma do triângulo, o atleta tem que ler o mapa, identificar os elementos naturais e construídos, e definir a estratégia para chegar próximo ponto.',
+        '7/9 O atleta deve visitar os pontos na ordem apresentada e conferir se o número do controle junto ao prisma corresponde ao número apresentado na sinalética.',
+        '8/9 Após o último ponto numerado há o ponto da chegada. O tempo de competição finaliza aqui.',
+        '9/9 Para definir o vencedor, os tempos de competição são comparado entre os atletas de mesma categoria, que realizaram o mesmo percurso.'
     ];
     var slideIndex = 1;
 
@@ -35,8 +35,8 @@
         var i;
         var foto = document.getElementsByClassName("foto");
         var x = slides;
-        if (n > x.length) {slideIndex = 1}
-        if (n < 1) {slideIndex = x.length} ;
+        if (n > x.length) {slideIndex = x.length}
+        if (n < 1) {slideIndex = 1} ;
         for (i = 0; i < x.length; i++) {
             foto[i].style.display = "none";
         }
@@ -58,7 +58,6 @@
             <img class="foto" src="img/i8.png">
             <img class="foto" src="img/i9.png">
         </div>
-        <div id="box" class="box"></div>
         <div id="box" class="box">
             <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;<span style="color: white">&#10094;</span></button>
             <button class="w3-button w3-display-right" onclick="plusDivs(+1)"><span style="color: white">&#10095;</span>&#10095;</button>
