@@ -2,65 +2,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <style>
-        .foto {
-            display: none;
-            width: 100vw;
-            height: 100vw;
-        }
-        .box {
-            padding-left: 40px;
-            padding-right: 40px;
+        body {
+            background-color: black;
+            color: white;
             font-family: Verdana, Geneva, Tahoma, sans-serif;
-            text-align: center;
+        }
+        li {
+            margin-left: 50px;
+        }
+        a {
+            color: cornflowerblue;
         }
     </style>
 <script>
-    var slides = [
-        '1/9 A Orientação é um esporte da natureza. É uma corrida individual em terrenos diversos, como campos, bosques e áreas urbanas, onde o atleta compete com outros de mesma experiência e faixa etária.',
-        '2/9 O percurso de orientação é a sequência de pontos de controle a serem visitados. Cada ponto de controle tem um número próprio, e é marcado no terreno com um prisma branco e laranja.',
-        '3/9 A sinalética é uma tabela impressa no mapa onde aparecem a ordem, o número do ponto de controle e alguns símbolos que ajudam a localizar o prisma.',
-        '4/9 Em uma competição, há um horário definido para a partida do atleta, que só poderá ver o mapa após autorizado. O tempo de competição começa neste instante.',
-        '5/9 Na partida, o atleta é direcionado para o prisma identificado com um triângulo. A localização dele corresponde ao ponto marcado com um triângulo no mapa. É como se o mapa dissesse: você está aqui.',
-        '6/9 A partir do prisma do triângulo, o atleta tem que ler o mapa, identificar os elementos naturais e construídos, e definir a estratégia para chegar próximo ponto.',
-        '7/9 O atleta deve visitar os pontos na ordem apresentada e conferir se o número do controle junto ao prisma corresponde ao número apresentado na sinalética.',
-        '8/9 Após o último ponto numerado há o ponto da chegada. O tempo de competição finaliza aqui.',
-        '9/9 Para definir o vencedor, os tempos de competição são comparado entre os atletas de mesma categoria, que realizaram o mesmo percurso.'
-    ];
-    var slideIndex = 1;
-
-    function plusDivs(n) {
-        showDivs(slideIndex += n);
-    }
-    function showDivs(n) {
-        var i;
-        var foto = document.getElementsByClassName("foto");
-        var x = slides;
-        if (n > x.length) {slideIndex = x.length}
-        if (n < 1) {slideIndex = 1} ;
-        for (i = 0; i < x.length; i++) {
-            foto[i].style.display = "none";
-        }
-        foto[slideIndex-1].style.display = "block";
-        var box = document.getElementById('box');
-        box.innerHTML = x[slideIndex-1];
-    }
 </script>
-<body onload="showDivs(1)">
-    <div style="margin: clear;">
-        <img class="foto" src="img/i1.png">
-        <img class="foto" src="img/i2.png">
-        <img class="foto" src="img/i3.png">
-        <img class="foto" src="img/i4.png">
-        <img class="foto" src="img/i5.png">
-        <img class="foto" src="img/i6.png">
-        <img class="foto" src="img/i7.png">
-        <img class="foto" src="img/i8.png">
-        <img class="foto" src="img/i9.png">
-    </div>
-    <div class="w3-content w3-display-container">
-        <div id="box" class="box"></div>
-        <button class="w3-button w3-display-left" onclick="plusDivs(-1)">&#10094;<span style="color: white">&#10094;</span></button>
-        <button class="w3-button w3-display-right" onclick="plusDivs(+1)"><span style="color: white">&#10095;</span>&#10095;</button>
+<body>
+    <div class="w3-container">
+        <ul class="w3-ul">
+            <li><button class="w3-button w3-black">O que é uma Pista de Orientação?</button></li>
+            <li>
+                <ul class="w3-ul">
+                    <li>A pista de orientação é um conjunto de pontos marcados em um terreno e representados em um mapa.</li>
+                    <li>O objetivo é visitar estes pontos em uma sequência definida no mapa.</li>
+                    <li>Esta sequência de pontos é chamada de percurso.</li>
+                    <li>O percurso inclui ainda um ponto de partida e um ponto de chegada.</li>
+                    <li>Esta é a essência de um esporte chamado Orientação.</li>
+                </ul>
+            </li>
+            <li><button class="w3-button w3-black">Como eu posso utilizar esta Pista de Orientação?</button></li>
+            <li>
+                <ul class="w3-ul">
+                    <li>Você pode baixar <a>aqui</a> o mapa desta Pista de Orientação e usar em seu celular.</li>
+                    <li>Outra opção é, se você estiver na Igreja Batista Central, se informar como adquirir o mapa impresso.</li>
+                    <li>Outra opção é imprimir o mapa que você baixou.</li>
+                    <li>Para iniciar o percurso, dirija-se ao ponto de partida, marcado com um triângulo no mapa, e que corresponde ao ponto localizado ao lado do balanço.</li>
+                    <li>A partir daí, você deve encontrar os pontos do percurso na ordem indicada no mapa até o último ponto, marcado com um círculo duplo.</li>
+                </ul>
+            </li>
+            <li><button class="w3-button w3-black">O que é Orientação</button></li>
+            <li><button class="w3-button w3-black">Onde eu posso aprender mais sobre Orientação?</button></li>
+            <li>
+                <ul class="w3-ul">
+                    <li>COFORT - Clube de Orientação Fortaleza</li>
+                    <li>CORR - Clube de Orientação Rumba na Rota</li>
+                    <li>Trilha Norte Clube de Orientação</li>
+                </ul>
+            </li>
+            <li><button class="w3-button w3-black">Quanto eu gasto para praticar Orientação?</button></li>
+            <li>
+                <ul class="w3-ul">
+                    <li>A Federação Cearense de Orientação - FECORI - regulamenta as competições no Estado, seguindo as regras da Confederação Brasileira de Orientação - CBO.</li>
+                    <li>Os Regulamentos das Competições, o Regimento de Taxas e o Calendário de Eventos podem ser acessados pelo site <a>www.fecori.org.br</a>.</li>
+                    <li>Em 2023, uma inscrição em uma prova oficial custa R$ 90,00 para o atleta filiado à CBO. Esta filiação custa R$ 50,00 uma única vez.</li>
+                    <li>Na primeira, e até três participações, ainda acompanhado por um atleta experiente, o atleta pré-filiado à CBO paga R$ 30,00. Esta pré-filiação custa R$ 15,00.</li>
+                    <li>Em 2023 teremos 3 competições oficiais em percurso de média/longa distância, e uma competição com 3 percursos rápidos em um fim de semana.</li>
+                    <li>Os clubes procuram também oferecer oportunidades de cursos de iniciação e percursos treinos ao longo do ano.</li>
+                </ul>
+            </li>
+          </ul>
     </div>
 </body>
 </html>
